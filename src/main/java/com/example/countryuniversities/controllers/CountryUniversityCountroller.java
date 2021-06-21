@@ -17,12 +17,6 @@ public class CountryUniversityCountroller {
     @Autowired
     GetCountryUniversityDataService getCountryUniversityDataService;
 
-    // @Autowired
-    // public CountryUniversityCountroller(GetCountryUniversityDataService getCountryUniversityDataService) {
-    //     this.getCountryUniversityDataService = getCountryUniversityDataService;
-    // }
-
-
     @GetMapping
     public void getCountryUniversity() throws IOException, InterruptedException, URISyntaxException{
         getCountryUniversityDataService.getCountryUniversity();

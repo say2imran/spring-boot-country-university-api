@@ -2,25 +2,30 @@ package com.example.countryuniversities.models;
 
 import java.util.List;
 
-import java.util.List;
+import javax.persistence.Embeddable;
 
 /**
  * webpage
  */
-public class Webpage {
-    private List<String> webpage;
+@Embeddable
+ public class Webpage {
+    private String webpage;
 
 
-    public Webpage(List<String> webpage) {
-        this.webpage = webpage;
-    }
-
-    public List<String> getWebpage() {
+    public String getWebpage() {
         return this.webpage;
     }
 
-    public void setWebpage(List<String> webpage) {
+    public void setWebpage(String webpage) {
         this.webpage = webpage;
+    }
+
+
+    @Override
+    public String toString() {
+        return "{" +
+            " webpage='" + getWebpage() + "'" +
+            "}";
     }
 
 }
